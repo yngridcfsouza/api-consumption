@@ -34,6 +34,8 @@ export const SearchContainer = styled.div`
   justify-content: center;
 
   @media (max-width: 480px) {
+    margin-right: 0;
+    margin-left: 8px;
     flex-direction: column;
     width: 100%;
     padding: 8px 0;
