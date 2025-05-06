@@ -3,13 +3,12 @@ import styled from "styled-components";
 export const MainSectionContainer = styled.div`
   width: 100%;
   max-width: 1200px;
-  margin: 16px auto;
+  margin: 0 auto 32px auto;
   padding: 16px;
   background-color: ${({ theme }) => theme.colors.background};
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   gap: 48px;
-  margin-bottom: 32px;
 `;
 
 export const PokemonListContainer = styled.div`
@@ -30,17 +29,15 @@ export const PokemonListContainer = styled.div`
 export const CardsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  justify-content: center;
   gap: 16px;
   list-style: none;
 
   button {
-    min-width: 200px;
-    min-height: 100%;
+    min-width: 100px;
     padding: 16px;
     background-color: ${({ theme }) => theme.colors.button.main};
     border: 2px solid ${({ theme }) => theme.colors.button.border};
+    color: ${({ theme }) => theme.colors.font.body};
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
     transition: transform 0.1s ease-in;
@@ -48,6 +45,10 @@ export const CardsContainer = styled.div`
     &:hover {
       transform: scale(1.05);
     }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -59,6 +60,7 @@ export const PokemonDetailsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   background-color: ${({ theme }) => theme.colors.gray[200]};
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -72,6 +74,7 @@ export const PokemonDetailsContainer = styled.div`
     padding: 8px;
     background-color: ${({ theme }) => theme.colors.button.main};
     border: 2px solid ${({ theme }) => theme.colors.button.border};
+    color: ${({ theme }) => theme.colors.font.body};
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 4px;
     transition: transform 0.1s ease-in;
@@ -92,5 +95,11 @@ export const DetailsContainer = styled.div`
   img {
     padding: 16px;
     transform: scale(1.5);
+  }
+
+  @media (max-width: 480px) {
+    img {
+      transform: scale(1.2);
+    }
   }
 `;

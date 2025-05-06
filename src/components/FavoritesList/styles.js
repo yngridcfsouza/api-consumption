@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const FavoritesListContainer = styled.div`
   width: 100%;
   min-height: 200px;
-  padding: 16px;
   background: ${({ theme }) => theme.colors.gray[200]};
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
@@ -11,30 +10,51 @@ export const FavoritesListContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 16px;
+
+  h1 {
+    font-size: 24px;
+    margin-top: 16px;
+  }
 `;
 
 export const FavoritesContainer = styled.div`
-  padding: 16px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   span {
-    padding: 4px 8px;
-    border-radius: 12px;
-    margin-right: 8px;
-    font-size: 18px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    list-style: none;
+    background-color: ${({ theme }) => theme.colors.gray[300]};
+    padding: 8px;
+    border-radius: 12px;
 
     button {
       margin-left: 8px;
       background: transparent;
       border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       svg {
         width: 16px;
         height: 16px;
+        color: ${({ theme }) => theme.colors.button.main};
+        transition: transform 0.2s;
+
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
+  }
+
+  @media (max-width: 480px) {
+    justify-content: center;
   }
 `;

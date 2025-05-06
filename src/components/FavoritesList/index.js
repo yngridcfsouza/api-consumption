@@ -19,7 +19,7 @@ export default function FavoritesList({ favorites, setFavorites }) {
         <strong>Ainda não possui favoritos!</strong>
       ) : (
       <>
-         <h1>Meus Pokémon favoritos</h1>
+         <h1>Meus favoritos</h1>
 
         <FavoritesContainer>
           {favorites.map((favorite) => (

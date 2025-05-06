@@ -8,11 +8,10 @@ export const PaginationContainer = styled.div`
   gap: 16px;
 
   button {
-    color: ${({ theme }) => theme.colors.font.body};
-
     padding: 8px;
     background-color: ${({ theme }) => theme.colors.button.main};
     border: 2px solid ${({ theme }) => theme.colors.button.border};
+    color: ${({ theme }) => theme.colors.font.body};
     border-radius: 4px;
     transition: background 0.3s, border-color 0.3s;
 

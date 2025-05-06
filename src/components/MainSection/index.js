@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 
 import PokemonService from '../../services/PokemonService';
+
+import Button from '../Button';
+
 import toast from '../../utils/toast';
 
 import {
@@ -132,9 +135,9 @@ export default function MainSection({ specificPokemon, setSpecificPokemon }) {
               <p>Defesa: {pokemonDetails.stats?.find(stat => stat.stat.name === 'defense').base_stat}</p>
             </DetailsContainer>
 
-            <button type='button' onClick={handleFavoritesButtonClick}>
+            <Button onClick={handleFavoritesButtonClick}>
               Favoritar
-            </button>
+            </Button>
           </>
         ) : (
           <p>
@@ -150,7 +153,7 @@ export default function MainSection({ specificPokemon, setSpecificPokemon }) {
 
         <CardsContainer>
           {pokemonList.map((pokemon) => (
-            <button
+            <Button
               type='button'
               key={pokemon.name}
               onClick={() => {
@@ -159,7 +162,7 @@ export default function MainSection({ specificPokemon, setSpecificPokemon }) {
               }}
             >
               {pokemon.name}
-            </button>
+            </Button>
           ))}
         </CardsContainer>
 

@@ -1,23 +1,23 @@
 import { PaginationContainer } from './styles';
-/* import Button from '../Button'; */
+
+import Button from '../Button';
 
 export default function Pagination({ currentPage, onPageChange, hasNext }) {
   return (
     <PaginationContainer>
-      <button
+      <Button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 0}
       >
         Anterior
-      </button>
+      </Button>
       <span>Página {currentPage + 1}</span>
-      <button
-        type='button'
+      <Button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={!hasNext}
       >
         Próxima
-      </button>
+      </Button>
     </PaginationContainer>
   );
 }

@@ -16,7 +16,7 @@ export default {
     header: ' #ffcc33',
     button: {
       main: '#ffcc33',
-      hover: '#cc3232',
+      hover: '#FFA000',
       favorite: '#8F4C4C',
       border: '#ccc',
     },

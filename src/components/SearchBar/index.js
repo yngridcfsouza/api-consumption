@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Container, SearchContainer } from "./styles";
 import { Input } from "../Input";
 
+import Button from "../Button";
+
 import pikachu from '../../assets/images/pikachu-img-sem-fundo.png';
 
 import toast from "../../utils/toast";
@@ -30,12 +32,12 @@ export default function SearchBar({ setSpecificPokemon }) {
           onChange={(event) => setSearchTerm(event.target.value)}
           placeholder="Busque seu Pokémon"
         />
-        <button
+        <Button
           type="submit"
           onClick={handleChangeSearchTerm}
         >
-          Buscar
-        </button>
+          {'Buscar'}
+        </Button>
       </SearchContainer>
     </Container>
   );
