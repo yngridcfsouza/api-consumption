@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/static/js/main.b5583308.js",
+    "index.html": "/index.html",
+    "static/media/trash.svg": "/static/media/trash.ce65100ded5afcb2ac5ac1b7000cec94.svg",
+    "static/media/check-circle.svg": "/static/media/check-circle.06a14cad03ca629164376ca134e7df92.svg",
+    "static/media/x-circle.svg": "/static/media/x-circle.91f0bd1aec1cbe05c5fee5b33dd77b41.svg",
+    "main.b5583308.js.map": "/static/js/main.b5583308.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b5583308.js"
+  ]
+}
