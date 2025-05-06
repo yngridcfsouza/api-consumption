@@ -28,6 +28,7 @@ export const Container = styled.div`
 `;
 
 export const SearchContainer = styled.div`
+  margin-right: 8px;
   display: flex;
   align-items: center;
   justify-content: center;

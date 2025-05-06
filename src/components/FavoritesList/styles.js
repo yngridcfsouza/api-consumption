@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const FavoritesListContainer = styled.div`
   width: 100%;
   min-height: 200px;
+  padding: 8px;
   background: ${({ theme }) => theme.colors.gray[200]};
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
@@ -10,7 +11,6 @@ export const FavoritesListContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
 
   h1 {
     font-size: 24px;
@@ -20,6 +20,7 @@ export const FavoritesListContainer = styled.div`
 
 export const FavoritesContainer = styled.div`
   width: 100%;
+  margin: 16px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;

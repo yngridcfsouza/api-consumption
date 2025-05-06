@@ -54,7 +54,6 @@ export default function MainSection({ specificPokemon, setSpecificPokemon }) {
   }, [offset, page]);
 
   useEffect(() => {
-
     async function loadPokemonDetails() {
       const pokemonToFetch = (specificPokemon?.toLowerCase() || selectedPokemon?.toLowerCase());
       if (!pokemonToFetch) {
@@ -158,6 +157,7 @@ export default function MainSection({ specificPokemon, setSpecificPokemon }) {
               key={pokemon.name}
               onClick={() => {
                 setSelectedPokemon(pokemon.name)
+                window.scrollTo({ top: 0, behavior: "smooth" });
                 setSpecificPokemon('');
               }}
             >
